@@ -1,4 +1,4 @@
-package app.src.main.java.dsa.LinkedList;
+package dsa.LinkedList;
 
 public class DoublyLinkedList {
 class Node{

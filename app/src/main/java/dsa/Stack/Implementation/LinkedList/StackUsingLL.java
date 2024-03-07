@@ -1,4 +1,4 @@
-package dsa.Stack;
+package dsa.Stack.Implementation.LinkedList;
 
 class Node{
     int data;

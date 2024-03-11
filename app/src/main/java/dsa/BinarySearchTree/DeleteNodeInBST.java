@@ -1,4 +1,5 @@
-import java.util.*;;
+package dsa.BinarySearchTree;
+import java.util.*;
 class Node{
     int data;
     Node left;

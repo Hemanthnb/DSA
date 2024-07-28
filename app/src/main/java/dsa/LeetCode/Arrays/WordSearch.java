@@ -1,4 +1,4 @@
-import java.util.*;
+package dsa.LeetCode.Arrays;
 
 public class WordSearch {
 

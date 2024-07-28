@@ -29,21 +29,34 @@ public class MergeIntervalsOptimized {
     static List<List<Integer>> mergeintervals(int arr[][]) {
         List<List<Integer>> mergedinterval = new ArrayList<>();
         List<List<Integer>> sortedInterval = sortIntervals(arr);
-        sortedInterval.add(mergedinterval.get(0));
-        int i = 1, j = 0;
-        while (i < sortedInterval.size()) {
-            if (sortedInterval.get(i).get(0) <= mergedinterval.get(j).get(1)
-                    && mergedinterval.get(j).get(1) <= sortedInterval.get(i).get(0)) {
-                mergedinterval.get(j).set(1, sortedInterval.get(i).get(0));
+        System.out.println(sortedInterval);
+
+        mergedinterval.add(sortedInterval.get(0));
+
+        int i = 0, j = 1;
+        while (j < sortedInterval.size()) {
+            if (sortedInterval.get(j).get(0) <= mergedinterval.get(i).get(1)) {
+                mergedinterval.get(i).set(1, Math.max(mergedinterval.get(i).get(1), sortedInterval.get(j).get(1)));
             } else {
-                System.out.println("Entered");
-                mergedinterval.add(sortedInterval.get(i));
-                j++;
+                mergedinterval.add(sortedInterval.get(j));
+                i++;
             }
-            i++;
+            j++;
+            // if (sortedInterval.get(i).get(0) <= mergedinterval.get(j).get(1)
+            // && mergedinterval.get(j).get(1) <= sortedInterval.get(i).get(0)) {
+
+            // mergedinterval.get(j).set(1, Math.max(mergedinterval.get(j).get(1),
+            // sortedInterval.get(i).get(1)));
+            // mergedinterval.get(j).set(1, sortedInterval.get(i).get(0));
+            // } else {
+            // System.out.println("Entered");
+            // mergedinterval.add(sortedInterval.get(i));
+            // j++;
         }
+        // i++;
 
         return mergedinterval;
+
     }
 
     public static void main(String[] args) {
@@ -52,4 +65,3 @@ public class MergeIntervalsOptimized {
     }
 
 }
-  

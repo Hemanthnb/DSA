@@ -3,7 +3,7 @@ package dsa.LeetCode.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SubarrayWithGivenSumK {
+public class SubarrayWithGivenSumEqualsK_Optimal {
     public static void main(String[] args) {
         // int nums[] = { 8, 2, 3, -2, 6, 1, 7 };
         int nums[] = { 1,2,1,2,1};
